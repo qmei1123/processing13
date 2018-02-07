@@ -8,7 +8,7 @@ var yFour;
 var yFive;
 
 function setup() {
-    createCanvas(1600, 1200);
+    createCanvas(1600, 1000);
     background(0);
     ragged = new Ragged();
     frameRate(.75);
@@ -36,11 +36,11 @@ class Ragged {
 function draw() {
     for (i = 0; i < width; i += 100) {
         for (y = 0; y < height; y += 100) {
-            xOne = random(60);
-            xTwo = random(50, 110);
+            xOne = 100 * sin(60) + 180;
+            xTwo = random(60)*cos(60) + 180;
             
-            yOne = random(50);
-            yTwo = random(40, 100);
+            yOne = 50 * cos(60) + 180;
+            yTwo = random(40, 140)*sin(60) + 180;
 
             ragged.show();
         //    ragged.move();
